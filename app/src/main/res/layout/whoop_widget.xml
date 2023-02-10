@@ -1,0 +1,224 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/widget_background"
+  android:theme="@style/Theme.WhoopWidget.AppWidgetContainer">
+
+  <ProgressBar
+    android:id="@+id/recoveryProgressBar"
+    style="@style/Widget.AppCompat.ProgressBar"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:indeterminate="false"
+    android:indeterminateOnly="false"
+    android:max="100"
+    android:progress="67"
+    android:progressBackgroundTintMode="multiply"
+    android:progressDrawable="@drawable/recovery_progress"
+    android:scaleX="1.0"
+    android:scaleY="1.0"
+    tools:layout_editor_absoluteX="152dp"
+    tools:layout_editor_absoluteY="22dp" />
+
+  <ProgressBar
+    android:id="@+id/strainProgressBar"
+    style="@style/Widget.AppCompat.ProgressBar"
+    android:layout_width="53dp"
+    android:layout_height="53dp"
+    android:layout_centerInParent="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:indeterminate="false"
+    android:indeterminateOnly="false"
+    android:max="21"
+    android:progress="16"
+    android:progressDrawable="@drawable/strain_progress"
+    tools:layout_editor_absoluteX="163dp"
+    tools:layout_editor_absoluteY="33dp" />
+
+  <TextView
+    android:id="@+id/recoveryTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="center|right"
+    android:layout_marginTop="@dimen/text_top_margin"
+    android:layout_marginEnd="@dimen/text_to_progress_margin"
+    android:layout_toStartOf="@+id/recoveryProgressBar"
+    android:text="@string/recovery_label"
+    android:textColor="@color/recovery_green"
+    android:textSize="@dimen/label_text_size"
+    tools:layout_editor_absoluteX="98dp"
+    tools:layout_editor_absoluteY="47dp" />
+
+  <TextView
+    android:id="@+id/recoveryValueTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/value_top_margin"
+    android:layout_marginEnd="@dimen/text_to_progress_margin"
+    android:layout_toStartOf="@+id/recoveryProgressBar"
+    android:text="@string/recovery_default"
+    android:textColor="@color/recovery_green"
+    tools:layout_editor_absoluteX="111dp"
+    tools:layout_editor_absoluteY="28dp" />
+
+  <TextView
+    android:id="@+id/hrvTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/recoveryProgressBar"
+    android:layout_gravity="center"
+    android:layout_marginEnd="@dimen/text_to_progress_margin"
+    android:layout_marginBottom="@dimen/text_top_margin"
+    android:layout_toStartOf="@+id/recoveryProgressBar"
+    android:text="@string/hrv_label"
+    android:textColor="@android:color/darker_gray"
+    android:textSize="@dimen/label_text_size"
+    tools:layout_editor_absoluteX="122dp"
+    tools:layout_editor_absoluteY="61dp" />
+
+  <TextView
+    android:id="@+id/hrvValueTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/recoveryProgressBar"
+    android:layout_gravity="center"
+    android:layout_marginEnd="@dimen/text_to_progress_margin"
+    android:layout_marginBottom="@dimen/value_top_margin"
+    android:layout_toStartOf="@+id/recoveryProgressBar"
+    android:text="@string/hrv_default"
+    android:textColor="@android:color/darker_gray"
+    tools:layout_editor_absoluteX="113dp"
+    tools:layout_editor_absoluteY="72dp" />
+
+  <TextView
+    android:id="@+id/strainTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/text_to_progress_margin"
+    android:layout_marginTop="@dimen/text_top_margin"
+    android:layout_toEndOf="@+id/recoveryProgressBar"
+    android:text="@string/day_strain_label"
+    android:textColor="@color/strain_teal"
+    android:textSize="@dimen/label_text_size"
+    tools:layout_editor_absoluteX="242dp"
+    tools:layout_editor_absoluteY="47dp" />
+
+  <TextView
+    android:id="@+id/strainValueTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/text_to_progress_margin"
+    android:layout_marginTop="@dimen/value_top_margin"
+    android:layout_toEndOf="@+id/recoveryProgressBar"
+    android:text="@string/strain_default"
+    android:textColor="@color/strain_teal"
+    tools:layout_editor_absoluteX="242dp"
+    tools:layout_editor_absoluteY="28dp" />
+
+  <TextView
+    android:id="@+id/sleepTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@id/recoveryProgressBar"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/text_to_progress_margin"
+    android:layout_marginBottom="@dimen/text_top_margin"
+    android:layout_toEndOf="@+id/recoveryProgressBar"
+    android:text="@string/sleep_label"
+    android:textColor="@android:color/darker_gray"
+    android:textSize="@dimen/label_text_size"
+    android:visibility="gone"
+    tools:layout_editor_absoluteX="242dp"
+    tools:layout_editor_absoluteY="61dp" />
+
+  <TextView
+    android:id="@+id/sleepValueTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/recoveryProgressBar"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/text_to_progress_margin"
+    android:layout_marginBottom="@dimen/value_top_margin"
+    android:layout_toEndOf="@+id/recoveryProgressBar"
+    android:text="@string/sleep_default"
+    android:textColor="@android:color/darker_gray"
+    android:visibility="gone"
+    tools:layout_editor_absoluteX="242dp"
+    tools:layout_editor_absoluteY="72dp" />
+
+  <TextView
+    android:id="@+id/caloriesTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@id/recoveryProgressBar"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/text_to_progress_margin"
+    android:layout_marginBottom="@dimen/text_top_margin"
+    android:layout_toEndOf="@+id/recoveryProgressBar"
+    android:text="@string/calories_label"
+    android:textColor="@android:color/darker_gray"
+    android:textSize="@dimen/label_text_size"
+    tools:layout_editor_absoluteX="242dp"
+    tools:layout_editor_absoluteY="61dp" />
+
+  <TextView
+    android:id="@+id/caloriesValueTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/recoveryProgressBar"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/text_to_progress_margin"
+    android:layout_marginBottom="@dimen/value_top_margin"
+    android:layout_toEndOf="@+id/recoveryProgressBar"
+    android:text="@string/calories_default"
+    android:textColor="@android:color/darker_gray"
+    tools:layout_editor_absoluteX="242dp"
+    tools:layout_editor_absoluteY="72dp" />
+
+  <TextView
+    android:id="@+id/whoopCenterTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:text="@string/whoop_logo"
+    android:textColor="@color/white"
+    android:textSize="@dimen/whoop_logo_text_size"
+    tools:layout_editor_absoluteX="181dp"
+    tools:layout_editor_absoluteY="47dp" />
+
+  <TextView
+    android:id="@+id/lastUpdateTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/recoveryProgressBar"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="@dimen/updated_top_margin"
+    android:text="Updated"
+    android:textColor="@android:color/darker_gray"
+    android:textSize="@dimen/updated_text_size" />
+
+  <Button
+    android:id="@+id/updateButton"
+    android:layout_width="@dimen/update_button_width"
+    android:layout_height="@dimen/update_button_height"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:text="Dummy"
+    android:textColor="@android:color/transparent"
+    android:visibility="visible" />
+  
+</RelativeLayout>

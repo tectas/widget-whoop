@@ -1,0 +1,17 @@
+<resources>
+  <string name="app_name">Whoop Widget</string>
+  <string name="appwidget_text">EXAMPLE</string>
+  <string name="add_widget">Add widget</string>
+  <string name="app_widget_description">This is an app widget description</string>
+  <string name="hrv_label">HRV</string>
+  <string name="day_strain_label">DAY STRAIN</string>
+  <string name="calories_label">CALORIES</string>
+  <string name="whoop_logo">W</string>
+  <string name="recovery_default">87%</string>
+  <string name="hrv_default">152</string>
+  <string name="strain_default">15.6</string>
+  <string name="calories_default">2,300</string>
+  <string name="recovery_label">RECOVERY</string>
+  <string name="sleep_label">Sleep</string>
+  <string name="sleep_default">7:55</string>
+</resources>
